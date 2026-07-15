@@ -7,17 +7,33 @@
 <body>
 <script>
   let n;
-  while (true){
-    n=+prompt(`Nhập chiều cao tam giác`);
-    if(n<=0||Number.isNaN(n)||!Number.isFinite(n)){
+  while (true) {
+    n = +prompt(`Nhập chiều cao tam giác`);
+    if (n <= 0 || Number.isNaN(n) || !Number.isFinite(n)) {
       alert(`Vui lòng nhập số nguyên dương hợp lệ!`);
       continue;
     }
     break;
   }
-  console.log("%c--- 1. GÓC DƯỚI BÊN TRÁI ---", "color: blue; font-weight: bold;");
+  console.log("--- 1. GÓC DƯỚI BÊN TRÁI ---");
   for (let i = 1; i <= n; i++) {
-    console.log("*".repeat(i))
+    console.log("*".repeat(i));
+  }
+  console.log("---2. GÓC TRÊN BÊN TRÁI ---");
+  for (let j = n; j >= 1; j--) {
+    console.log("*".repeat(j));
+  }
+  console.log(`---3. GÓC DƯỚI BÊN PHẢI ---`)
+  for (let i = 1; i <=n ; i++) {
+    let khoangTrang="\u00A0".repeat(n-1);
+    let sao="*".repeat(i)
+    console.log(khoangTrang+sao);
+  }
+  console.log("--- 4. GÓC TRÊN BÊN PHẢI ---");
+  for (let i = n; i >=1 ; i--) {
+    let khoangTrang="\u00A0".repeat(n-i);
+    let sao="*".repeat(i);
+    console.log(khoangTrang+sao);
   }
 </script>
 </body>
