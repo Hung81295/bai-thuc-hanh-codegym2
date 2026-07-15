@@ -7,24 +7,27 @@
 <body>
 <script>
   let tienGui;
-  while(true){
-    if(tienGui<0||Number.isNaN(tienGui)){
+  while (true) {
+    tienGui=+prompt(`Nhập số tiền cần gửi vào đây`);
+    if (tienGui < 0 || Number.isNaN(tienGui)) {
       alert(`Vui lòng nhập số tiền hợp lệ!`);
       continue;
     }
     break;
   }
   let soThang;
-  while(true){
-    if(soThang<=0||Number.isNaN(soThang)){
+  while (true) {
+    soThang=+prompt(`Nhập số tháng muốn gửi`);
+    if (soThang <= 0 || Number.isNaN(soThang)) {
       alert(`Vui lòng nhập số tháng hợp lệ!`);
       continue;
     }
     break;
   }
   let lai;
-  while(true){
-    if(lai<0||Number.isNaN(lai)){
+  while (true) {
+    lai=+prompt(`Nhập lãi vào đây`);
+    if (lai < 0 || Number.isNaN(lai)) {
       alert(`Vui lòng nhập số lãi hợp lệ!`);
       continue;
     }
@@ -34,11 +37,12 @@
   console.log(`Lãi suất: ${lai}% / tháng`);
   console.log(`Thời gian: ${soThang} tháng`);
   console.log("-----------------------------------------");
-let laiThucTe=lai/100;
+  let laiThucTe = lai / 100;
   for (let i = 1; i <= soThang; i++) {
-    let tienLaiThangNay=tienGui*laiThucTe;
-    tienGui+=tienLaiThangNay;
-    console.log(`Tháng ${i}: Tiền lãi = ${tienLaiThangNay.toLocaleString("vi-vn")}`)
+    let tienLaiThangNay = tienGui * laiThucTe;
+    tienGui += tienLaiThangNay;
+    console.log(`Tháng ${i}: Tiền lãi = ${tienLaiThangNay.toLocaleString("vi-VN")}VND`);
+    console.log(`Tổng tiền nhận được là: ${tienGui.toLocaleString("vi-VN")}VND`);
   }
 </script>
 </body>
