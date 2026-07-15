@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>bai 4</title>
+</head>
+<body>
+<script>
+  let chieuRong;
+  while (true) {
+    chieuRong = +prompt(`Nhập chiều rộng hình chữ nhật`);
+    if (chieuRong <= 0 || Number.isNaN(chieuRong) || !Number.isFinite(chieuRong)) {
+      alert(`Vui lòng nhập số nguyên dương hợp lệ!`);
+      continue;
+    }
+    break;
+  }
+  let chieuCao;
+  while (true) {
+    chieuCao = +prompt(`Nhập chiều cao hình chữ nhật`);
+    if (chieuCao <= 0 || Number.isNaN(chieuCao) || !Number.isFinite(chieuCao)) {
+      alert(`Vui lòng nhập số nguyên dương hợp lệ!`);
+      continue;
+    }
+    break;
+  }
+  console.log("--Hình chữ nhật đặc--");
+  for (let i = 1; i <=chieuCao ; i++) {
+    console.log("*".repeat(chieuRong));
+  }
+  console.log("--Hình chữ nhật rỗng--");
+  for (let i = 1; i <=chieuCao; i++) {
+    if(i===1||i===chieuCao){
+      console.log("*".repeat(chieuRong));
+    }else {
+      let khoangTrang="\u00A0".repeat(chieuRong-2);
+      console.log("*"+khoangTrang+"*");
+    }
+  }
+</script>
+</body>
+</html>
