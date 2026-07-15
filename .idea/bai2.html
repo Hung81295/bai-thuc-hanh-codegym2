@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>bai2</title>
+</head>
+<body>
+<script>
+  let n=+prompt(`nhập số nguyên dương bất kỳ`)
+ while (n<=0||Number.isNaN(n)){
+    alert(`Nhập lại`);
+    n=+prompt(`nhập số nguyên dương bất kỳ`);
+ }
+ let giaiThua=1;
+  for (let i = 1; i <= n; i++) {
+giaiThua*=i
+  }
+  console.log(`giai thưa là ${giaiThua}`)
+</script>
+</body>
+</html>
