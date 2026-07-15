@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>bai 3</title>
+</head>
+<body>
+<script>
+  let n;
+  while (true){
+    n=+prompt(`Nhập chiều cao tam giác`);
+    if(n<=0||Number.isNaN(n)||!Number.isFinite(n)){
+      alert(`Vui lòng nhập số nguyên dương hợp lệ!`);
+      continue;
+    }
+    break;
+  }
+  console.log("%c--- 1. GÓC DƯỚI BÊN TRÁI ---", "color: blue; font-weight: bold;");
+  for (let i = 1; i <= n; i++) {
+    console.log("*".repeat(i))
+  }
+</script>
+</body>
+</html>
