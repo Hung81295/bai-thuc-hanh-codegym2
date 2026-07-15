@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>bài 5</title>
+</head>
+<body>
+<script>
+  let tienGui;
+  while(true){
+    if(tienGui<0||Number.isNaN(tienGui)){
+      alert(`Vui lòng nhập số tiền hợp lệ!`);
+      continue;
+    }
+    break;
+  }
+  let soThang;
+  while(true){
+    if(soThang<=0||Number.isNaN(soThang)){
+      alert(`Vui lòng nhập số tháng hợp lệ!`);
+      continue;
+    }
+    break;
+  }
+  let lai;
+  while(true){
+    if(lai<0||Number.isNaN(lai)){
+      alert(`Vui lòng nhập số lãi hợp lệ!`);
+      continue;
+    }
+    break;
+  }
+  console.log(`Số tiền ban đầu: ${tienGui.toLocaleString()} VND`);
+  console.log(`Lãi suất: ${lai}% / tháng`);
+  console.log(`Thời gian: ${soThang} tháng`);
+  console.log("-----------------------------------------");
+let laiThucTe=lai/100;
+  for (let i = 1; i <= soThang; i++) {
+    let tienLaiThangNay=tienGui*laiThucTe;
+    tienGui+=tienLaiThangNay;
+    console.log(`Tháng ${i}: Tiền lãi = ${tienLaiThangNay.toLocaleString("vi-vn")}`)
+  }
+</script>
+</body>
+</html>
